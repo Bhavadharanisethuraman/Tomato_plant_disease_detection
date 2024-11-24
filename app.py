@@ -35,7 +35,7 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 #st.set_option('deprecation.showfileUploaderEncoding', False)
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_model():
     model=tf.keras.models.load_model('tomatoes.h5')
     return model
